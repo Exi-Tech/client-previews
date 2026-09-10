@@ -11,8 +11,8 @@ Owner folder: Ahmad. Variants: Ticket and Glossy. Shared assets live in `assets/
 
 - Supplied lead: phone, address, hours, Google rating snapshot (4.9 / 376), access/payment/appointment attributes, Place ID and exact Google listing image. Dummy email excluded.
 - Verified Booksy studio page: https://booksy.com/en-us/1515115_prime-cutz-barbershop_barber-shop_16013_lakeland. It confirms the address, online booking, multiple barber profiles, a 4.9 Booksy rating and the service examples used. Current pricing remains on Booksy.
-- Exact business images: portrait studio photo from the supplied Google listing; wide studio image from the verified Booksy page.
-- No exact official Facebook or Instagram profile was confidently verified, so no social links were added.
+- Exact business images: portrait studio photo from the supplied Google listing; wide studio image from Booksy; studio and service images from the shop’s official Facebook page: https://www.facebook.com/people/Prime-Cutz-Barbershop/61576765316248/
+- The Ticket hero uses one correctly fitted studio photo. Wide imagery is only placed in wide frames.
 - No invented reviews, prices, staff biographies or claims are used.
 
 ## Live paths

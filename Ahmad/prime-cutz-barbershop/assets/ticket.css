@@ -155,6 +155,6 @@ html{scroll-padding-top:86px}body{overflow-x:hidden}.skip{position:fixed;left:1r
 @media(max-width:960px){.trust-grid{grid-template-columns:1fr}.bar .btn{padding:.85rem .55rem}.logo{font-size:1.08rem}}
 
 :root{--tang:#d5a414;--tang-d:#aa7f09;--powder:#eceff0;--powder-d:#cfd5d7;--ink:#111315}
-.ticket .stub .img img{object-position:center}.visit{background:#111315}.visit .btn{color:#111315}.visit .btn.line{color:#fff}
-.studio-pair{display:grid;grid-template-columns:1fr 1.5fr;gap:1rem;align-items:start}.studio-pair .photo-natural{border:1px solid #ddd}
+.ticket .stub{min-height:0;aspect-ratio:4/3}.ticket .stub .img{position:absolute;inset:0}.ticket .stub .img img{object-position:center}.visit{background:#111315}.visit .btn{color:#111315}.visit .btn.line{color:#fff}
+.studio-pair{display:grid;grid-template-columns:1.45fr 1fr;gap:1rem;align-items:start}.studio-pair .photo-natural{border:1px solid #ddd}
 @media(max-width:960px){.ticket .main{order:1}.ticket .stub{order:2;aspect-ratio:4/3}.studio-pair{grid-template-columns:1fr}}

@@ -47,7 +47,12 @@
     "maps": "https://www.google.com/maps/search/?api=1&query=Prime+Cutz+Barbershop+7383+US+Hwy+98+N+Lakeland+FL+33809&query_place_id=ChIJy24Y345H3YgRCgY6bYrrPPU"
   },
   "social": {
-    "status": "No exact official Facebook or Instagram profile confidently verified; omitted"
+    "facebook": "https://www.facebook.com/people/Prime-Cutz-Barbershop/61576765316248/",
+    "verified": "Exact official page supplied by the user and visually checked",
+    "images": [
+      "facebook-studio.jpg (official studio photo)",
+      "facebook-haircut.jpg (finished haircut at the shop)"
+    ]
   },
   "excluded": [
     "Dummy CRM email",
