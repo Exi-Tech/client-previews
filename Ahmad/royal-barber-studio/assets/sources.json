@@ -1,0 +1,32 @@
+{
+  "checked": "2026-09-10",
+  "lead": {
+    "phone": "+1 863-213-4939",
+    "address": "1631 Shepherd Rd, Lakeland, FL 33811",
+    "hours": {
+      "Monday": "9am–6pm",
+      "Tuesday": "9am–6pm",
+      "Wednesday": "9am–6pm",
+      "Thursday": "9am–6pm",
+      "Friday": "9am–6pm",
+      "Saturday": "9am–5pm",
+      "Sunday": "Closed"
+    },
+    "googleRating": 4.8,
+    "googleReviews": 102,
+    "placeId": "ChIJ7dnJP1073YgRe9dFAxk2GvQ"
+  },
+  "booksy": {
+    "studio": "https://booksy.com/en-us/1073643_royal-barber-studio_barber-shop_16013_lakeland",
+    "studioImage": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1073643/biz_photo/c094d674d34342bb8b62aae4447650-royal-barber-studio-biz-photo-0ec4bc497dd64f4aa290ea40a0ee61-booksy.jpeg",
+    "suppliedIndividual": "https://booksy.com/en-us/rwg/584026_rey-elbarbero92_barber-shop_16013_lakeland"
+  },
+  "google": {
+    "listingImage": "supplied by lead export",
+    "reviews": "https://search.google.com/local/reviews?placeid=ChIJ7dnJP1073YgRe9dFAxk2GvQ",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Royal+Barber+Studio+1631+Shepherd+Rd+Lakeland+FL+33811&query_place_id=ChIJ7dnJP1073YgRe9dFAxk2GvQ"
+  },
+  "social": {
+    "status": "No exact official profile confidently verified; omitted"
+  }
+}

@@ -2,6 +2,8 @@
 
 One GitHub Pages site, multiple static client concepts. Publish from main / root; .nojekyll bypasses processing. Every push updates the shared site.
 
+Start with [CLIENT_PREVIEW_WORKFLOW.md](CLIENT_PREVIEW_WORKFLOW.md) for the research, build, review, publishing, and social-sharing process.
+
 ## Standard structure
 
 Employee/client-slug/index.html is the client concept selector. Employee/client-slug/template-slug/index.html is a preview. Employee/client-slug/assets/ holds that client's shared photos, fonts and styles. Preserve existing employee names and case: Ahmad, Hayiqa, Haroon, Aveen. Client and variant names use lowercase hyphenated slugs.
