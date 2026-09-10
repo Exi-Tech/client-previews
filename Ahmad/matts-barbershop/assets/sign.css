@@ -142,3 +142,6 @@ html{scroll-padding-top:90px} .skip{position:fixed;left:1rem;top:-100px;z-index:
 .preview-note{font-size:.8rem}.photo-caption{font-size:.85rem;color:#666;margin-top:1rem}
 .review-card{border:2px solid currentColor;padding:1.8rem;border-radius:12px}.review-card strong{display:block;font-size:2.5rem;line-height:1.1;margin-bottom:.7rem}.review-card a{text-decoration:underline;text-underline-offset:4px}
 @media(max-width:600px){nav .btn{padding:.8rem 1rem;font-size:.8rem}.logo{font-size:1.25rem}.sec-head h2{overflow-wrap:anywhere}.sign{width:calc(100% - 20px)}.sign h1{font-size:clamp(3rem,13vw,5rem)}.sign .small{font-size:.75rem}.week span{display:block}.ticket .main{order:1}.ticket .stub{order:2;aspect-ratio:4/3}.meta{gap:.6rem}.top{flex-wrap:wrap}.bar .btn{padding:.85rem .5rem}.hours{gap:.3rem .8rem}}
+
+/* Show the complete business logo without cropping. */
+.visit .img{background:#fff}.visit .img img{object-fit:contain}
