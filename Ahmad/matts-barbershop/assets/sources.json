@@ -1,0 +1,36 @@
+{
+  "checked": "2026-09-10",
+  "listing": "https://booksy.com/en-us/424650_matt-s-barber-shop_barber-shop_16013_lakeland",
+  "photos": [
+    {
+      "file": "photo-0.jpg",
+      "source": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/424650/cover/b83f144dcf994eb0acc93e149f38b5-matt-s-barber-shop-2663c51f85fc4be08fd6f11c0a0619-booksy.jpeg",
+      "alt": "Matt's Barber Shop - Lakeland"
+    },
+    {
+      "file": "photo-1.jpg",
+      "source": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/424650/inspiration/a09c4dd1d6294312998f2b715ab9cc-matt-s-barber-shop-inspiration-23e433c959aa4d3e97e514ab5e1c01-booksy.jpeg",
+      "alt": "Matt's Barber Shop work example 1"
+    },
+    {
+      "file": "photo-2.jpg",
+      "source": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/424650/inspiration/6b66db720ce84f8d9dc028f8c48f8c-matt-s-barber-shop-inspiration-4087e2a3adbb4fe68606655b975459-booksy.jpeg",
+      "alt": "Matt's Barber Shop work example 2"
+    },
+    {
+      "file": "photo-3.jpg",
+      "source": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/424650/inspiration/32578d6fdd2340bbacf3050b98e330-matt-s-barber-shop-inspiration-7fc9bb2a6d314960a6ba84c1ef8d4b-booksy.jpeg",
+      "alt": "Matt's Barber Shop work example 3"
+    },
+    {
+      "file": "photo-4.jpg",
+      "source": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/424650/inspiration/c049f1183f8f4aaa9e125f24b0e133-matt-s-barber-shop-inspiration-5e7b00fc06fe4ab0a27ee946234a83-booksy.jpeg",
+      "alt": "Matt's Barber Shop work example 4"
+    },
+    {
+      "file": "photo-5.jpg",
+      "source": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/424650/inspiration/7d36dca56d864446906dddb8dbccd3-matt-s-barber-shop-inspiration-aba18081746f44bf84585fa7d60f11-booksy.jpeg",
+      "alt": "Matt's Barber Shop work example 5"
+    }
+  ]
+}
