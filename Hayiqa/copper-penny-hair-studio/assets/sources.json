@@ -1,23 +1,14 @@
 {
   "checked": "2026-09-10",
-  "lead": {
-    "business": "Copper Penny Hair Studio",
-    "phone": "+1 863-940-2161",
-    "address": "1003 Florida Ave S, Lakeland, FL 33803",
-    "hours": {"Monday": "Closed", "Tuesday": "10am–7pm", "Wednesday": "10am–7pm", "Thursday": "10am–7pm", "Friday": "10am–7pm", "Saturday": "10am–7pm", "Sunday": "Closed"},
-    "googleRating": 4.7,
-    "googleReviews": 171,
-    "ratingBreakdown": {"1": 8, "2": 2, "3": 4, "4": 4, "5": 153},
-    "placeId": "ChIJHbbots043YgR9DA74f1ejx0",
-    "attributes": ["Women-owned", "Wheelchair-accessible entrance, parking and restroom"]
-  },
-  "google": {
-    "listingImage": {"file": "google-listing.jpg", "source": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmQ0E3YeaZaYQfa1kSK3CymeeH4Q50d4k8c_Vg_mxCkl7j4yFDPjFz4vjioZJzfkOSZYsGKPop6GXpKlQSguWkvWDg1FrKTRR3zClUvpVz9rr7-96TjUW4yZowZiTQyyW9pJRs=w1600-h1000-k-no"},
-    "reviews": "https://search.google.com/local/reviews?placeid=ChIJHbbots043YgR9DA74f1ejx0",
-    "maps": "https://www.google.com/maps/search/?api=1&query=Copper+Penny+Hair+Studio+1003+S+Florida+Ave+Lakeland+FL+33803&query_place_id=ChIJHbbots043YgR9DA74f1ejx0"
-  },
-  "social": {"facebook": "https://www.facebook.com/thecopperpennyhairstudiolkld", "status": "Exact official Facebook page verified; no exact Instagram verified"},
-  "images": [{"file": "facebook-profile.jpg", "sourcePage": "https://www.facebook.com/thecopperpennyhairstudiolkld", "description": "Official Facebook profile collage showing Copper Penny interior details"}],
-  "verifiedServices": ["Haircuts", "Hair coloring", "Hairstyling", "Highlights", "Curly-hair services", "Perms", "Blowouts"],
-  "excluded": ["Carrier information", "Unrelated personal address", "Unverified Instagram", "Invented prices or testimonials"]
+  "business": "Copper Penny Hair Studio",
+  "phone": "+1 863-940-2161",
+  "address": "1003 Florida Ave S, Lakeland, FL 33803",
+  "googleRatingSnapshot": 4.7,
+  "googleReviewCountSnapshot": 171,
+  "placeId": "ChIJHbbots043YgR9DA74f1ejx0",
+  "facebook": "https://www.facebook.com/thecopperpennyhairstudiolkld",
+  "googleReviews": "https://search.google.com/local/reviews?placeid=ChIJHbbots043YgR9DA74f1ejx0",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Copper+Penny+Hair+Studio+1003+S+Florida+Ave+Lakeland+FL+33803&query_place_id=ChIJHbbots043YgR9DA74f1ejx0",
+  "templates": ["templates/copper-penny-homepage-v1-full-image-hero.html", "templates/copper-penny-homepage-v2-modern-aesthetic.html"],
+  "note": "Concept files are unchanged copies of the user-supplied templates."
 }
