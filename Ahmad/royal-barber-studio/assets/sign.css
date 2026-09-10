@@ -144,3 +144,12 @@ html{scroll-padding-top:86px}body{overflow-x:hidden}.skip{position:fixed;left:1r
 @media(max-width:600px){nav .btn{padding:.78rem .9rem;font-size:.78rem}.logo{font-size:1.12rem}.hero .wrap{min-height:auto}.brand-image{width:100%}.hours{gap:.28rem .75rem}.bar .btn{padding:.85rem .5rem}}
 
 :root{--pink:#d89b13;--pink-d:#ae7805;--bulb:#ffc83d}.sign h1 .pink,.board h3,.visit h2 span{color:#ffc83d}.hero .bg{opacity:.55}.hero .bg img{filter:saturate(.8) brightness(.55)}.visit .brand-image{border:2px solid #333}.visit .brand-image img{object-fit:contain}.week{background:#b77c00}.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:960px){.review-grid{grid-template-columns:1fr}}
+
+/* Keep the complete opening statement visible at normal desktop zoom. */
+@media(min-width:961px){
+  .hero .wrap{padding:2.1rem 0 2.6rem;min-height:calc(100vh - 70px)}
+  .sign{max-width:820px;padding:2rem 3rem 1.8rem}
+  .sign h1{font-size:clamp(4.5rem,6.6vw,6.7rem);line-height:.88;margin:.3rem 0 .5rem}
+  .sign p{margin-bottom:1.1rem}
+  .hero .sub{margin-top:1.8rem}
+}
