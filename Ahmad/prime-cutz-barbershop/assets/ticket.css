@@ -155,11 +155,11 @@ html{scroll-padding-top:86px}body{overflow-x:hidden}.skip{position:fixed;left:1r
 @media(max-width:960px){.trust-grid{grid-template-columns:1fr}.bar .btn{padding:.85rem .55rem}.logo{font-size:1.08rem}}
 
 :root{--tang:#d5a414;--tang-d:#aa7f09;--powder:#eceff0;--powder-d:#cfd5d7;--ink:#111315}
-.ticket{grid-template-columns:minmax(520px,.9fr) minmax(0,1.1fr)}
+.ticket{grid-template-columns:minmax(520px,.9fr) minmax(0,1.1fr);min-height:640px}
 .ticket .main{padding:clamp(2.4rem,3.2vw,3.6rem)}
 .ticket h1{font-size:clamp(3.6rem,4.5vw,5.25rem);max-width:34rem}
 .ticket .sub{max-width:34rem}.ticket .cta{flex-wrap:nowrap}
 .ticket .stub{min-height:570px;aspect-ratio:auto}.ticket .stub .img{position:absolute;inset:0}.ticket .stub .img img{object-position:center}.visit{background:#111315}.visit .btn{color:#111315}.visit .btn.line{color:#fff}
 .studio-pair{display:grid;grid-template-columns:1.45fr 1fr;gap:1rem;align-items:start}.studio-pair .photo-natural{border:1px solid #ddd}
-@media(max-width:1100px) and (min-width:961px){.ticket{grid-template-columns:minmax(470px,.95fr) minmax(0,1.05fr)}.ticket .main{padding:2.35rem}.ticket h1{font-size:3.6rem}.ticket .cta{flex-wrap:wrap}}
-@media(max-width:960px){.ticket{grid-template-columns:1fr}.ticket .main{order:1}.ticket h1{font-size:clamp(2.6rem,15vw,4.4rem)}.ticket .cta{flex-wrap:wrap}.ticket .stub{order:2;min-height:0;aspect-ratio:4/3}.studio-pair{grid-template-columns:1fr}}
+@media(max-width:1100px) and (min-width:961px){.ticket{grid-template-columns:minmax(470px,.95fr) minmax(0,1.05fr);min-height:610px}.ticket .main{padding:2.35rem}.ticket h1{font-size:3.6rem}.ticket .cta{flex-wrap:wrap}}
+@media(max-width:960px){.ticket{grid-template-columns:1fr;min-height:0}.ticket .main{order:1}.ticket h1{font-size:clamp(2.6rem,15vw,4.4rem)}.ticket .cta{flex-wrap:wrap}.ticket .stub{order:2;min-height:0;aspect-ratio:4/3}.studio-pair{grid-template-columns:1fr}}
