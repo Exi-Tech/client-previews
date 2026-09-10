@@ -1,0 +1,34 @@
+{
+  "checked": "2026-09-10",
+  "lead": {
+    "business": "Crowned By Bleu",
+    "phone": "+1 863-224-5270",
+    "address": "4000 US Hwy 98 N Ste 101, Lakeland, FL 33809",
+    "hours": {"Monday": "8am–11pm", "Tuesday": "8am–11pm", "Wednesday": "8am–11pm", "Thursday": "8am–11pm", "Friday": "8am–11pm", "Saturday": "8am–11pm", "Sunday": "Closed"},
+    "googleRating": 5.0,
+    "googleReviews": 61,
+    "ratingBreakdown": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 61},
+    "placeId": "ChIJPaGHKuNH3YgR3v20bBjy2bI"
+  },
+  "officialSite": {
+    "url": "https://crowned-by-bleu.square.site/",
+    "booking": "https://app.squareup.com/appointments/book/kpqin5673a6s4s/LJ3PAHR1WR5W5/start",
+    "categories": ["Kids (5-11)", "Adult (12+)", "Maintenance", "Treatments", "Add Ons", "Protective Styles"],
+    "requirements": ["$25 deposit required", "Virtual consultation required for first-time clients", "Instructions via text message and email"]
+  },
+  "google": {
+    "listingImage": {"file": "google-listing.jpg", "source": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlZWnTWsp97PBmEYOhE7zX-HMovNtcQh0serfPG8FIPefChLyK0weXXr4wDgcYoGFdLcI-DeyPijFdhzQBPUocSQseBnG_6ZXZcuAeSMDzevAaxJSI8XDSXdzKDOrFmNn2SgvsSCaSs25DA=w1600-h1000-k-no"},
+    "reviews": "https://search.google.com/local/reviews?placeid=ChIJPaGHKuNH3YgR3v20bBjy2bI",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Crowned+By+Bleu+4000+US+Hwy+98+N+Ste+101+Lakeland+FL+33809&query_place_id=ChIJPaGHKuNH3YgR3v20bBjy2bI"
+  },
+  "social": {"facebook": "https://www.facebook.com/kliyah.coleman.7", "instagram": "https://www.instagram.com/leahbleu/", "tiktok": "https://www.tiktok.com/@leahbleuu", "verification": "Handles published by official Square site"},
+  "images": [
+    {"file": "logo.jpg", "source": "https://crowned-by-bleu.square.site/uploads/b/71a012464b1fcf53526144c73a4b38e2f360bf164300955a81c683cdc74ae003/IMG_8227_1725672721.jpeg"},
+    {"file": "crowned.png", "source": "https://crowned-by-bleu.square.site/uploads/b/71a012464b1fcf53526144c73a4b38e2f360bf164300955a81c683cdc74ae003/CROWNED_1769048987.png"},
+    {"file": "shop.png", "source": "https://crowned-by-bleu.square.site/uploads/b/71a012464b1fcf53526144c73a4b38e2f360bf164300955a81c683cdc74ae003/THE%20SHOP_1783047335.png"},
+    {"file": "work-one.png", "source": "https://crowned-by-bleu.square.site/uploads/b/71a012464b1fcf53526144c73a4b38e2f360bf164300955a81c683cdc74ae003/Untitled%20design%203_1786309875.png"},
+    {"file": "work-two.png", "source": "https://crowned-by-bleu.square.site/uploads/b/71a012464b1fcf53526144c73a4b38e2f360bf164300955a81c683cdc74ae003/Untitled%20design%205_1786309874.png"}
+  ],
+  "conflictResolution": "My Salon Suite cached listing says Suite 206 and 863-508-5694; supplied current Google record says Suite 101 and 863-224-5270, which the preview uses.",
+  "excluded": ["Carrier information", "Dummy email hi@mystore.com", "Conflicting older suite and phone", "Invented services, prices or testimonials"]
+}

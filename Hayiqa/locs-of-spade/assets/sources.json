@@ -1,0 +1,16 @@
+{
+  "checked": "2026-09-10",
+  "business": "Locs Of Spade",
+  "address": "4000 US Hwy 98 N Ste 205, Lakeland, FL 33809",
+  "googleRatingSnapshot": 5.0,
+  "googleReviewCountSnapshot": 46,
+  "placeId": "ChIJ1Z6IGuAX3YgRBTXb_YXfHSU",
+  "officialSite": "https://locs-of-spade.square.site/",
+  "googleReviews": "https://search.google.com/local/reviews?placeid=ChIJ1Z6IGuAX3YgRBTXb_YXfHSU",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Locs+Of+Spade+4000+US+Hwy+98+N+Ste+205+Lakeland+FL+33809&query_place_id=ChIJ1Z6IGuAX3YgRBTXb_YXfHSU",
+  "templates": [
+    "templates/locs-of-spade-homepage-redesign.html",
+    "templates/locs-of-spade-homepage-redesign-v2-logo-colors.html"
+  ],
+  "note": "Concept files are based on the user-supplied templates. Homepage V2 has the requested review-placeholder labels removed."
+}
