@@ -1,0 +1,37 @@
+{
+  "checked": "2026-09-10",
+  "lead": {
+    "phone": "+1 863-815-1681",
+    "address": "6605 N Socrum Loop Rd, Lakeland, FL 33809",
+    "hours": {
+      "Monday": "8am\u20135:30pm",
+      "Tuesday": "8am\u20135:30pm",
+      "Wednesday": "8am\u20135:30pm",
+      "Thursday": "8am\u20135:30pm",
+      "Friday": "8am\u20135:30pm",
+      "Saturday": "8am\u20132pm",
+      "Sunday": "Closed"
+    },
+    "googleRating": 4.8,
+    "googleReviews": 160,
+    "placeId": "ChIJkXJ7yTZB3YgRHSLYhlaZdr0"
+  },
+  "google": {
+    "listingImage": "Supplied by lead export; storefront visibly confirms 6605, phone and hours",
+    "reviews": "https://search.google.com/local/reviews?placeid=ChIJkXJ7yTZB3YgRHSLYhlaZdr0",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Knickerbockers+Barber+Shop+6605+N+Socrum+Loop+Rd+Lakeland+FL+33809&query_place_id=ChIJkXJ7yTZB3YgRHSLYhlaZdr0"
+  },
+  "research": {
+    "directory": "https://www.bestprosintown.com/fl/lakeland/knickerbockers-barber-shop-/",
+    "localMention": "https://laltoday.6amcity.com/6-conversations-want-join",
+    "reddit": "https://www.reddit.com/r/lakeland/comments/ddnio8"
+  },
+  "social": {
+    "status": "No exact official Facebook or Instagram profile confidently verified; omitted"
+  },
+  "excluded": [
+    "Dummy CRM email",
+    "Unverified booking links",
+    "Unverified social profiles"
+  ]
+}
