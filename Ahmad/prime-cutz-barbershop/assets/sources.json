@@ -1,0 +1,57 @@
+{
+  "checked": "2026-09-10",
+  "lead": {
+    "phone": "+1 863-333-4431",
+    "address": "7383 US Hwy 98 N, Lakeland, FL 33809",
+    "hours": {
+      "Monday": "9am\u20137pm",
+      "Tuesday": "9am\u20137pm",
+      "Wednesday": "9am\u20137pm",
+      "Thursday": "9am\u20137pm",
+      "Friday": "9am\u20137pm",
+      "Saturday": "9am\u20136pm",
+      "Sunday": "Closed"
+    },
+    "googleRating": 4.9,
+    "googleReviews": 376,
+    "placeId": "ChIJy24Y345H3YgRCgY6bYrrPPU",
+    "attributes": [
+      "Appointments recommended",
+      "Walk-ins accepted",
+      "Good for kids",
+      "Credit and debit cards accepted",
+      "Wheelchair-accessible entrance, parking and restroom"
+    ]
+  },
+  "booksy": {
+    "url": "https://booksy.com/en-us/1515115_prime-cutz-barbershop_barber-shop_16013_lakeland",
+    "rating": 4.9,
+    "studioImage": "https://d2zdpiztbgorvt.cloudfront.net/region1/us/1515115/biz_photo/c79066b0ae52487b9b75130e970a9e-prime-cutz-babershop-biz-photo-5216440637a3429d842dd4266b2dd7-booksy.jpeg?size=640x427",
+    "verified": [
+      "Business name and address",
+      "Online booking",
+      "Multiple barber listings",
+      "Signature haircut",
+      "Prime full service experience",
+      "Haircut and beard grooming",
+      "Senior haircut",
+      "Head shave",
+      "Beard shaping",
+      "Line up",
+      "Hot towel options"
+    ]
+  },
+  "google": {
+    "listingImage": "Supplied by lead export",
+    "reviews": "https://search.google.com/local/reviews?placeid=ChIJy24Y345H3YgRCgY6bYrrPPU",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Prime+Cutz+Barbershop+7383+US+Hwy+98+N+Lakeland+FL+33809&query_place_id=ChIJy24Y345H3YgRCgY6bYrrPPU"
+  },
+  "social": {
+    "status": "No exact official Facebook or Instagram profile confidently verified; omitted"
+  },
+  "excluded": [
+    "Dummy CRM email",
+    "Unverified social profiles",
+    "Invented prices or testimonials"
+  ]
+}
