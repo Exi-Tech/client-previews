@@ -1,0 +1,39 @@
+{
+  "checked": "2026-09-10",
+  "lead": {
+    "business": "Tracy & Company HAIR DESIGNERS",
+    "location": "Lakeland, FL 33803",
+    "googleRating": 4.7,
+    "googleReviews": 14,
+    "placeId": "ChIJQdeNQdI43YgReulkGvw7Ze8",
+    "reviews": "https://search.google.com/local/reviews?placeid=ChIJQdeNQdI43YgReulkGvw7Ze8",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tracy+%26+Company+Hair+Designers+1211+S+Florida+Ave+Lakeland+FL+33803&query_place_id=ChIJQdeNQdI43YgReulkGvw7Ze8"
+  },
+  "officialFacebook": {
+    "url": "https://www.facebook.com/people/Tracy-and-Company-Hair-Designers/100063808441093/",
+    "verified": [
+      "1211 S Florida Ave, Lakeland, FL 33803",
+      "+1 863-688-5962",
+      "tracyandcompanyhairdesigners@gmail.com",
+      "Historic Dixieland",
+      "Tracy is the owner",
+      "22 years in the business",
+      "Eight stylists",
+      "96% recommend from 57 reviews"
+    ],
+    "images": [
+      "color-before.jpg",
+      "color-after.jpg"
+    ]
+  },
+  "streetView": {
+    "image": "salon-exterior.jpg",
+    "source": "Google Street View URL supplied in the lead export"
+  },
+  "excluded": [
+    "Dummy CRM email",
+    "Conflicting third-party hours",
+    "Unverified prices",
+    "Invented testimonials"
+  ]
+}
