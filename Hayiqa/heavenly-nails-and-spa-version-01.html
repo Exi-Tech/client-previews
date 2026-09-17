@@ -1,0 +1,1413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171b18">
+  <title>Heavenly Nails & Spa | Tampa, FL</title>
+  <meta name="description" content="Heavenly Nails & Spa in Tampa — manicures, pedicures, gel, dip, acrylic, nail art and more at two South Dale Mabry locations.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#171b18;
+      --text:#222722;
+      --muted:#70786f;
+      --cream:#f7f6f1;
+      --white:#ffffff;
+      --green:#8a9d78;
+      --green-dark:#627355;
+      --green-pale:#e8ede3;
+      --lime:#dbe6cb;
+      --line:#e2e5df;
+      --shadow:0 25px 75px rgba(23,27,24,.11);
+      --shadow-soft:0 14px 42px rgba(23,27,24,.075);
+      --radius:26px;
+      --container:min(1200px, calc(100% - 40px));
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--text);
+      font-family:"DM Sans",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    body.menu-open{overflow:hidden}
+
+    a{text-decoration:none;color:inherit}
+    img{width:100%;height:100%;object-fit:cover;display:block}
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    .container{width:var(--container);margin-inline:auto}
+    .section{padding:104px 0}
+    .section-small{padding:74px 0}
+
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{
+      font-family:"Instrument Serif",serif;
+      font-weight:400;
+      color:var(--ink);
+    }
+    h2{
+      font-size:clamp(3.15rem,5.6vw,5.35rem);
+      line-height:.98;
+      letter-spacing:-.035em;
+      margin-bottom:18px;
+    }
+    .lead{
+      color:var(--muted);
+      line-height:1.82;
+      font-size:1rem;
+      max-width:650px;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--green-dark);
+      font-size:.7rem;
+      text-transform:uppercase;
+      letter-spacing:.17em;
+      font-weight:700;
+    }
+    .eyebrow:before{
+      content:"";
+      width:28px;
+      height:1px;
+      background:currentColor;
+    }
+
+    .btn{
+      min-height:50px;
+      padding:0 22px;
+      border:1px solid var(--ink);
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      background:var(--ink);
+      color:#fff;
+      font-weight:700;
+      font-size:.82rem;
+      letter-spacing:.01em;
+      transition:.22s ease;
+    }
+    .btn:hover{
+      background:var(--green-dark);
+      border-color:var(--green-dark);
+      transform:translateY(-2px);
+      box-shadow:0 14px 30px rgba(98,115,85,.18);
+    }
+    .btn-light{
+      background:#fff;
+      color:var(--ink);
+      border-color:#d8ddd4;
+    }
+    .btn-light:hover{color:#fff}
+    .btn-green{
+      background:var(--green);
+      border-color:var(--green);
+    }
+    .btn-small{
+      min-height:42px;
+      padding:0 17px;
+      font-size:.76rem;
+    }
+
+    /* announcement */
+    .announcement{
+      background:var(--ink);
+      color:#e6e9e3;
+      font-size:.71rem;
+      letter-spacing:.04em;
+    }
+    .announcement-inner{
+      min-height:37px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .announcement a{color:#fff;font-weight:700}
+
+    /* nav */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.93);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(226,229,223,.85);
+    }
+    .nav{
+      height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:max-content;
+    }
+    .logo-mark{
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--green-pale);
+      color:var(--green-dark);
+      font-family:"Instrument Serif",serif;
+      font-size:1.5rem;
+      font-style:italic;
+    }
+    .logo-copy strong{
+      display:block;
+      font-size:1rem;
+      letter-spacing:.14em;
+      text-transform:lowercase;
+      font-weight:700;
+      color:var(--ink);
+      line-height:1;
+    }
+    .logo-copy small{
+      display:block;
+      margin-top:5px;
+      color:#8b9289;
+      font-size:.58rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:26px;
+    }
+    nav>a:not(.btn){
+      font-size:.78rem;
+      color:#596058;
+      font-weight:600;
+      transition:.18s;
+    }
+    nav>a:not(.btn):hover{color:var(--green-dark)}
+    .menu-btn{
+      display:none;
+      width:45px;height:45px;
+      border:1px solid var(--line);
+      border-radius:50%;
+      background:#fff;
+      color:var(--ink);
+    }
+
+    /* hero */
+    .hero{
+      padding:54px 0 83px;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(219,230,203,.48), transparent 25rem),
+        linear-gradient(180deg,#fbfcf9 0%,#f4f6f0 100%);
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:.94fr 1.06fr;
+      gap:70px;
+      align-items:center;
+    }
+    .hero h1{
+      font-size:clamp(4.8rem,8.6vw,8.15rem);
+      line-height:.85;
+      letter-spacing:-.065em;
+      margin:21px 0 28px;
+      max-width:700px;
+    }
+    .hero h1 em{
+      color:var(--green-dark);
+      font-weight:400;
+    }
+    .hero-copy{
+      max-width:590px;
+      font-size:1.04rem;
+      color:var(--muted);
+      line-height:1.82;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:11px;
+      margin-top:29px;
+    }
+    .hero-proof{
+      display:flex;
+      gap:30px;
+      align-items:center;
+      padding-top:27px;
+      margin-top:37px;
+      border-top:1px solid #dce1d8;
+      max-width:570px;
+    }
+    .hero-rating strong{
+      display:block;
+      font-family:"Instrument Serif",serif;
+      font-size:2rem;
+      font-weight:400;
+      line-height:.9;
+    }
+    .stars{
+      color:var(--green-dark);
+      letter-spacing:2px;
+      font-size:.72rem;
+      margin-top:6px;
+    }
+    .hero-proof-copy{
+      border-left:1px solid #d8ddd4;
+      padding-left:26px;
+      color:#7c847a;
+      font-size:.77rem;
+      line-height:1.6;
+    }
+    .hero-proof-copy b{color:var(--ink)}
+
+    .hero-media{
+      position:relative;
+      min-height:660px;
+    }
+    .hero-photo{
+      position:absolute;
+      inset:0 15px 0 55px;
+      border-radius:180px 180px 30px 30px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#dfe3dc;
+    }
+    .hero-photo:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,transparent 53%,rgba(16,19,16,.22));
+    }
+    .hero-badge{
+      position:absolute;
+      z-index:3;
+      right:-1px;
+      top:66px;
+      width:108px;
+      height:108px;
+      border-radius:50%;
+      background:var(--ink);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      text-transform:uppercase;
+      font-size:.61rem;
+      font-weight:700;
+      letter-spacing:.1em;
+      border:8px solid #f4f6f0;
+      line-height:1.5;
+    }
+    .hero-card{
+      position:absolute;
+      z-index:3;
+      left:0;
+      bottom:38px;
+      width:245px;
+      padding:21px;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(13px);
+      border:1px solid rgba(255,255,255,.8);
+      border-radius:20px;
+      box-shadow:var(--shadow-soft);
+    }
+    .hero-card small{
+      display:block;
+      color:var(--green-dark);
+      font-size:.61rem;
+      font-weight:700;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+    .hero-card b{
+      display:block;
+      font-family:"Instrument Serif",serif;
+      font-weight:400;
+      font-size:1.5rem;
+      margin:8px 0 7px;
+    }
+    .hero-card span{
+      color:#7d857b;
+      font-size:.74rem;
+      line-height:1.55;
+    }
+
+    /* trust */
+    .trust{
+      background:#fff;
+      border-block:1px solid var(--line);
+    }
+    .trust-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+    }
+    .trust-item{
+      padding:25px;
+      text-align:center;
+      border-right:1px solid var(--line);
+    }
+    .trust-item:last-child{border:0}
+    .trust-item b{
+      display:block;
+      font-family:"Instrument Serif",serif;
+      font-size:1.38rem;
+      font-weight:400;
+      margin-bottom:3px;
+    }
+    .trust-item span{
+      color:#858d83;
+      font-size:.69rem;
+    }
+
+    /* services */
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:35px;
+      margin-bottom:45px;
+    }
+    .section-head-copy{max-width:720px}
+    .section-head h2{margin-top:14px}
+    .section-head .lead{margin-bottom:0}
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .service-card{
+      min-height:300px;
+      padding:29px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:#fff;
+      position:relative;
+      transition:.23s ease;
+    }
+    .service-card:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow-soft);
+      border-color:#ccd4c5;
+    }
+    .service-no{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--green-pale);
+      color:var(--green-dark);
+      font-family:"Instrument Serif",serif;
+      font-size:1.2rem;
+    }
+    .service-card h3{
+      font-size:2rem;
+      margin:27px 0 9px;
+    }
+    .service-card p{
+      color:var(--muted);
+      font-size:.82rem;
+      line-height:1.7;
+      margin:0;
+    }
+    .service-meta{
+      position:absolute;
+      left:29px;
+      right:29px;
+      bottom:27px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding-top:17px;
+      border-top:1px solid #ebede9;
+    }
+    .service-meta strong{
+      color:var(--green-dark);
+      font-size:.83rem;
+    }
+    .service-meta span{
+      color:#9aa098;
+      font-size:.68rem;
+    }
+
+    /* opi */
+    .opi{
+      background:var(--ink);
+      color:#fff;
+      overflow:hidden;
+    }
+    .opi-grid{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:60px;
+      align-items:center;
+    }
+    .opi .eyebrow{color:#becdad}
+    .opi h2{color:#fff}
+    .opi p{color:#b8c0b7}
+    .polish-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+    .polish{
+      height:360px;
+      border-radius:22px;
+      overflow:hidden;
+      position:relative;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .polish:nth-child(1){background:linear-gradient(180deg,#fff 0 35%,#f0b1c7 35% 100%)}
+    .polish:nth-child(2){background:linear-gradient(180deg,#fff 0 35%,#c63e48 35% 100%)}
+    .polish:nth-child(3){background:linear-gradient(180deg,#fff 0 35%,#ec8eaa 35% 100%)}
+    .polish:nth-child(4){background:linear-gradient(180deg,#fff 0 35%,#a44363 35% 100%)}
+    .polish:before{
+      content:"OPI";
+      position:absolute;
+      top:28px;
+      left:0;right:0;
+      text-align:center;
+      color:#111;
+      font-size:1.6rem;
+      font-weight:700;
+      letter-spacing:-.06em;
+    }
+    .polish span{
+      position:absolute;
+      bottom:16px;
+      left:14px;right:14px;
+      padding:10px;
+      border-radius:12px;
+      background:rgba(255,255,255,.9);
+      color:#262626;
+      font-size:.64rem;
+      font-weight:700;
+      text-align:center;
+    }
+
+    /* gallery */
+    .gallery-section{background:var(--cream)}
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:1.16fr .84fr .84fr;
+      grid-template-rows:300px 300px;
+      gap:13px;
+    }
+    .gallery-item{
+      overflow:hidden;
+      border-radius:22px;
+      position:relative;
+      background:#e7e9e4;
+    }
+    .gallery-item:first-child{grid-row:1/3}
+    .gallery-item:nth-child(4){grid-column:2/4}
+    .gallery-item img{transition:.5s ease}
+    .gallery-item:hover img{transform:scale(1.04)}
+    .gallery-item:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,transparent 65%,rgba(16,18,16,.32));
+      pointer-events:none;
+    }
+    .gallery-caption{
+      position:absolute;
+      left:16px;
+      bottom:15px;
+      z-index:2;
+      color:#fff;
+      font-size:.7rem;
+      font-weight:700;
+      letter-spacing:.04em;
+    }
+
+    /* experience */
+    .experience-grid{
+      display:grid;
+      grid-template-columns:.93fr 1.07fr;
+      gap:72px;
+      align-items:center;
+    }
+    .experience-media{
+      min-height:610px;
+      position:relative;
+    }
+    .experience-main{
+      position:absolute;
+      inset:0 70px 58px 0;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .experience-small{
+      position:absolute;
+      right:0;
+      bottom:0;
+      width:255px;
+      height:305px;
+      border:9px solid #fff;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow-soft);
+    }
+    .experience-copy h2{margin:14px 0 20px}
+    .features{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:13px 22px;
+      margin:29px 0 34px;
+    }
+    .feature{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#626a61;
+      font-size:.82rem;
+    }
+    .feature:before{
+      content:"✓";
+      width:24px;height:24px;
+      flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      color:var(--green-dark);
+      background:var(--green-pale);
+      font-size:.69rem;
+      font-weight:800;
+    }
+
+    /* team */
+    .team{background:#f5f7f2}
+    .team-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+    .team-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:23px;
+    }
+    .team-card .level{
+      display:inline-block;
+      padding:6px 9px;
+      border-radius:999px;
+      background:var(--green-pale);
+      color:var(--green-dark);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.58rem;
+      font-weight:800;
+    }
+    .team-card h3{
+      font-size:1.7rem;
+      margin:23px 0 7px;
+    }
+    .team-card p{
+      font-size:.75rem;
+      color:#7f877d;
+      line-height:1.6;
+      margin:0;
+    }
+
+    /* events */
+    .events{
+      background:var(--ink);
+      color:#fff;
+    }
+    .events-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:60px;
+      align-items:center;
+    }
+    .events .eyebrow{color:#becdad}
+    .events h2{color:#fff}
+    .events p{color:#bcc4ba}
+    .event-cards{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    .event-card{
+      min-height:205px;
+      padding:24px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.11);
+      background:rgba(255,255,255,.04);
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+    }
+    .event-card span{
+      color:#b7c7a9;
+      font-size:.67rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+    }
+    .event-card h3{
+      color:#fff;
+      font-size:1.65rem;
+      margin-top:7px;
+    }
+
+    /* reviews */
+    .review-grid{
+      display:grid;
+      grid-template-columns:.72fr 1.28fr;
+      gap:65px;
+      align-items:start;
+    }
+    .big-rating{
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      border:1px solid #dbe1d6;
+      background:#f8faf6;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      margin-top:28px;
+    }
+    .big-rating strong{
+      display:block;
+      font-family:"Instrument Serif",serif;
+      font-size:4rem;
+      line-height:.9;
+      font-weight:400;
+    }
+    .big-rating small{
+      display:block;
+      color:#8a9288;
+      font-size:.68rem;
+      margin-top:7px;
+    }
+    .quotes{display:grid;gap:13px}
+    .quote{
+      padding:25px 26px;
+      border:1px solid var(--line);
+      border-radius:20px;
+    }
+    .quote q{
+      font-family:"Instrument Serif",serif;
+      font-size:1.45rem;
+      line-height:1.35;
+    }
+    .quote footer{
+      margin-top:13px;
+      color:#8b9289;
+      font-size:.66rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    /* locations */
+    .locations{background:var(--cream)}
+    .location-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:17px;
+    }
+    .location-card{
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:#fff;
+    }
+    .location-photo{
+      height:285px;
+      background:#e9ece6;
+    }
+    .location-content{padding:30px}
+    .location-content h3{
+      font-size:2rem;
+      margin:8px 0 7px;
+    }
+    .location-content p{
+      color:#777f75;
+      font-size:.8rem;
+      line-height:1.62;
+      margin-bottom:19px;
+    }
+    .hours{
+      display:grid;
+      gap:8px;
+      margin:19px 0 23px;
+    }
+    .hour{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      font-size:.74rem;
+      color:#6e766d;
+      border-bottom:1px dashed #e2e6df;
+      padding-bottom:8px;
+    }
+    .hour b{color:#3d443d}
+    .location-actions{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    /* final cta */
+    .final-cta{
+      padding:84px 0;
+      background:#fff;
+    }
+    .cta-box{
+      position:relative;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:38px;
+      align-items:center;
+      padding:45px 48px;
+      border-radius:30px;
+      background:var(--green-pale);
+    }
+    .cta-box:after{
+      content:"";
+      position:absolute;
+      width:220px;height:220px;
+      border:1px solid rgba(98,115,85,.18);
+      border-radius:50%;
+      right:-80px;top:-120px;
+      box-shadow:0 0 0 55px rgba(98,115,85,.04);
+    }
+    .cta-box h2{
+      font-size:clamp(2.75rem,4.5vw,4.5rem);
+      max-width:760px;
+      margin:0;
+      position:relative;
+      z-index:2;
+    }
+    .cta-box .btn{position:relative;z-index:2}
+
+    /* footer */
+    footer.site-footer{
+      background:var(--ink);
+      color:#fff;
+      padding:55px 0 26px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.4fr .8fr .8fr 1fr;
+      gap:38px;
+    }
+    footer.site-footer .logo-copy strong{color:#fff}
+    footer.site-footer .logo-copy small{color:#9aa198}
+    footer.site-footer p,
+    footer.site-footer a,
+    footer.site-footer span{
+      color:#aeb5ac;
+      font-size:.74rem;
+    }
+    .footer-intro{
+      max-width:350px;
+      line-height:1.7;
+      margin-top:16px;
+    }
+    .footer-title{
+      color:#fff;
+      font-size:.65rem;
+      text-transform:uppercase;
+      letter-spacing:.15em;
+      font-weight:800;
+      margin-bottom:14px;
+    }
+    .footer-links{display:grid;gap:9px}
+    .footer-links a:hover{color:#fff}
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.08);
+      margin-top:42px;
+      padding-top:21px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      color:#727a72;
+      font-size:.66rem;
+    }
+
+    .mobile-book{
+      display:none;
+      position:fixed;
+      z-index:45;
+      left:14px;right:14px;bottom:14px;
+      box-shadow:0 16px 40px rgba(23,27,24,.25);
+    }
+
+    @media(max-width:1020px){
+      nav{display:none}
+      nav.open{
+        display:flex;
+        position:fixed;
+        left:20px;right:20px;
+        top:118px;
+        flex-direction:column;
+        align-items:stretch;
+        padding:22px;
+        border:1px solid var(--line);
+        border-radius:22px;
+        background:#fff;
+        box-shadow:var(--shadow);
+      }
+      nav.open .btn{width:100%}
+      .menu-btn{display:grid;place-items:center}
+
+      .hero-grid,.experience-grid,.opi-grid,.events-grid,.review-grid{
+        grid-template-columns:1fr;
+      }
+      .hero-media{min-height:600px}
+      .service-grid{grid-template-columns:1fr 1fr}
+      .team-grid{grid-template-columns:1fr 1fr}
+      .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:320px 240px 260px;
+      }
+      .gallery-item:first-child{grid-column:1/3;grid-row:auto}
+      .gallery-item:nth-child(4){grid-column:1/3}
+      .footer-grid{grid-template-columns:1.2fr 1fr 1fr}
+      .footer-grid>div:last-child{grid-column:1/-1}
+    }
+
+    @media(max-width:700px){
+      :root{--container:calc(100% - 28px)}
+      .section{padding:74px 0}
+      .announcement-inner{justify-content:center}
+      .announcement-inner span:first-child{display:none}
+      .nav{height:70px}
+      nav.open{top:107px}
+      .logo-copy strong{font-size:.9rem}
+      .logo-copy small{font-size:.52rem}
+
+      .hero{padding:39px 0 67px}
+      .hero h1{font-size:clamp(4rem,19vw,5.8rem)}
+      .hero-actions{display:grid;grid-template-columns:1fr}
+      .hero-actions .btn{width:100%}
+      .hero-proof{gap:14px}
+      .hero-proof-copy{padding-left:15px}
+      .hero-media{min-height:490px}
+      .hero-photo{left:28px;right:0;border-radius:120px 120px 24px 24px}
+      .hero-badge{width:84px;height:84px;top:32px;right:-2px;border-width:6px;font-size:.52rem}
+      .hero-card{left:0;bottom:17px;width:205px;padding:17px}
+
+      .trust-grid{grid-template-columns:1fr 1fr}
+      .trust-item:nth-child(2){border-right:0}
+      .trust-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+
+      .section-head{display:block}
+      .section-head .btn{margin-top:18px}
+      .service-grid{grid-template-columns:1fr}
+      .polish-row{grid-template-columns:1fr 1fr}
+      .polish{height:265px}
+
+      .gallery-grid{
+        grid-template-columns:1fr;
+        grid-template-rows:350px 235px 235px 280px;
+      }
+      .gallery-item:first-child,.gallery-item:nth-child(4){grid-column:auto}
+
+      .experience-media{min-height:500px}
+      .experience-main{right:45px;bottom:45px}
+      .experience-small{width:190px;height:230px}
+      .features{grid-template-columns:1fr}
+      .team-grid{grid-template-columns:1fr}
+      .event-cards{grid-template-columns:1fr}
+      .big-rating{width:180px;height:180px}
+      .big-rating strong{font-size:3.3rem}
+
+      .location-grid{grid-template-columns:1fr}
+      .location-photo{height:250px}
+      .cta-box{grid-template-columns:1fr;padding:31px 24px}
+      .cta-box .btn{width:100%}
+
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:1/-1}
+      .footer-bottom{display:block}
+      .footer-bottom span{display:block;margin-top:7px}
+      .mobile-book{display:flex}
+      body{padding-bottom:70px}
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="announcement">
+  <div class="container announcement-inner">
+    <span>Tampa nail care since 2002 · Two South Dale Mabry locations</span>
+    <a href="tel:+18139190725">Call / text: 813-919-0725</a>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">
+      <span class="logo-mark">h</span>
+      <span class="logo-copy">
+        <strong>heavenly</strong>
+        <small>Nails & Spa · Tampa</small>
+      </span>
+    </a>
+
+    <nav id="mainNav">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#artists">Artists</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#locations">Locations</a>
+      <a href="https://www.fresha.com/providers/heavenly-nails-xjdt0ch7?pId=146648&share=true&allOffer=true&menu=true" target="_blank" rel="noopener" class="btn btn-small">Book Online ↗</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Nail care in South Tampa</span>
+        <h1>Where every visit feels <em>heavenly.</em></h1>
+        <p class="hero-copy">
+          Elevated manicures, spa pedicures, gel, dip, acrylic and custom nail art from a large team of licensed technicians — with two convenient S. Dale Mabry locations and online booking 24/7.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-green" href="https://www.fresha.com/providers/heavenly-nails-xjdt0ch7?pId=146648&share=true&allOffer=true&menu=true" target="_blank" rel="noopener">Book Your Appointment ↗</a>
+          <a class="btn btn-light" href="#services">Explore Services</a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="hero-rating">
+            <strong>4.9</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="hero-proof-copy">
+            <b>Hundreds of Fresha reviews</b><br>
+            Longtime Tampa clients, repeat appointments and a team built for every nail style.
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-photo">
+          <img src="https://images.fresha.com/locations/location-profile-images/146648/4212206/1cbc1b3c-41ac-43a2-9a2a-845f21b39595-HeavenlyNailsandSpa-US-Florida-Tampa-PalmaCeiaNeptunePublix-Fresha.jpg?class=venue-gallery-mobile&f_quality=85&f_width=1080" alt="Heavenly Nails and Spa Tampa storefront">
+        </div>
+        <div class="hero-badge">Two Tampa<br>locations</div>
+        <div class="hero-card">
+          <small>Established 2002</small>
+          <b>Made to make you smile.</b>
+          <span>Professional care, an enormous color selection and artists for every finish — simple to statement.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="container trust-grid">
+      <div class="trust-item"><b>Since 2002</b><span>Serving Tampa clients</span></div>
+      <div class="trust-item"><b>2 Locations</b><span>Both on S. Dale Mabry Hwy</span></div>
+      <div class="trust-item"><b>Master + Elite</b><span>Licensed nail technicians</span></div>
+      <div class="trust-item"><b>Book 24/7</b><span>Instant online appointments</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-copy">
+          <span class="eyebrow">The menu</span>
+          <h2>Your nails, your ritual.</h2>
+          <p class="lead">Classic maintenance, spa-level pampering or a full nail transformation. Start with one of Heavenly’s most popular services, then choose your technician and time online.</p>
+        </div>
+        <a class="btn btn-light" href="https://www.tampaheavenlynails.com/book-online" target="_blank" rel="noopener">Full Price List ↗</a>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-no">01</div>
+          <h3>Gel Manicure</h3>
+          <p>Long-wearing gel color with clean cuticle work and a polished, glossy finish.</p>
+          <div class="service-meta"><strong>from $38</strong><span>40–60 min</span></div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">02</div>
+          <h3>Signature Pedicure</h3>
+          <p>A Heavenly favorite for regular foot care, relaxation and a beautifully finished polish.</p>
+          <div class="service-meta"><strong>$42</strong><span>about 45 min</span></div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">03</div>
+          <h3>Luxury Pedicure</h3>
+          <p>Step up the self-care with a more indulgent pedicure experience and extra pampering.</p>
+          <div class="service-meta"><strong>$54</strong><span>about 45 min</span></div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">04</div>
+          <h3>Dip Powder</h3>
+          <p>Durable color and structure with a smooth finish for clients who love added strength.</p>
+          <div class="service-meta"><strong>from $45</strong><span>45+ min</span></div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">05</div>
+          <h3>Liquid Gel</h3>
+          <p>Full sets and fills designed for strength, shape and a refined enhancement finish.</p>
+          <div class="service-meta"><strong>from $50</strong><span>45–60 min</span></div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">06</div>
+          <h3>Nail Art</h3>
+          <p>French, chrome, cat-eye and detailed designs that turn your appointment into a custom set.</p>
+          <div class="service-meta"><strong>$15–50 add-on</strong><span>design dependent</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section opi">
+    <div class="container opi-grid">
+      <div>
+        <span class="eyebrow">Featured color</span>
+        <h2>Meet your next OPI obsession.</h2>
+        <p class="lead">Heavenly features premium OPI color and seasonal shades — from barely-there pink to bright statement red. Choose the shade at your appointment, then let your tech do the rest.</p>
+        <div class="hero-actions">
+          <a class="btn btn-green" href="https://www.fresha.com/providers/heavenly-nails-xjdt0ch7?pId=146648&share=true&allOffer=true&menu=true" target="_blank" rel="noopener">Book Your Color ↗</a>
+        </div>
+      </div>
+
+      <div class="polish-row" aria-label="Featured OPI color inspiration">
+        <div class="polish"><span>Bubble Bunny</span></div>
+        <div class="polish"><span>Big Apple Energy</span></div>
+        <div class="polish"><span>Pompeii Pink</span></div>
+        <div class="polish"><span>Queens Rule</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-copy">
+          <span class="eyebrow">Recent work</span>
+          <h2>From our artists.</h2>
+          <p class="lead">A cleaner, more editorial take on Heavenly’s existing gallery — using real work featured on the current website.</p>
+        </div>
+        <a class="btn btn-light" href="https://www.tampaheavenlynails.com/gallery" target="_blank" rel="noopener">View Full Gallery ↗</a>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="https://static.wixstatic.com/media/6af8a5_1bd2283747a44bc68a56784e0ec4bf99~mv2.jpg/v1/fill/w_900,h_1200,q_90/6af8a5_1bd2283747a44bc68a56784e0ec4bf99~mv2.jpg" alt="Nail art by Heavenly Nails">
+          <span class="gallery-caption">NAILS BY TIN TIN</span>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://static.wixstatic.com/media/6af8a5_2fcb5238ebd341069645ce757d0c6701~mv2.jpg/v1/fill/w_700,h_900,q_90/6af8a5_2fcb5238ebd341069645ce757d0c6701~mv2.jpg" alt="Nails by Lina">
+          <span class="gallery-caption">NAILS BY LINA</span>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://static.wixstatic.com/media/6af8a5_e91c50b9f875449081518570c9ec19c1~mv2.jpg/v1/fill/w_700,h_900,q_90/6af8a5_e91c50b9f875449081518570c9ec19c1~mv2.jpg" alt="Heavenly Nails design">
+          <span class="gallery-caption">CUSTOM DETAIL</span>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://static.wixstatic.com/media/6af8a5_d0961a7415394d6c8f7b4b202d37bb9e~mv2.jpg/v1/fill/w_1000,h_700,q_90/6af8a5_d0961a7415394d6c8f7b4b202d37bb9e~mv2.jpg" alt="Heavenly nail art">
+          <span class="gallery-caption">HEAVENLY NAIL ART</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container experience-grid">
+      <div class="experience-media">
+        <div class="experience-main">
+          <img src="https://images.fresha.com/locations/location-profile-images/146621/2150814/50c65d52-43d7-4944-81ec-c1177e82e564-HeavenlyNails-US-Florida-Tampa-UrgentCareBuilding-Fresha.jpg?class=venue-gallery-large&f_quality=85" alt="Inside Heavenly Nails Tampa">
+        </div>
+        <div class="experience-small">
+          <img src="https://static.wixstatic.com/media/6af8a5_bb30f10a3f8f48a48eea21010ef568ec~mv2.jpg/v1/fill/w_650,h_850,q_90/6af8a5_bb30f10a3f8f48a48eea21010ef568ec~mv2.jpg" alt="Nail art by Heavenly Nails">
+        </div>
+      </div>
+
+      <div class="experience-copy">
+        <span class="eyebrow">Why Heavenly</span>
+        <h2>Big selection. Personal appointment.</h2>
+        <p class="lead">Heavenly has grown into a large Tampa nail team without losing the part that matters most: matching each client with the right technician, service and style.</p>
+        <p class="lead">Whether you want a quiet signature pedicure, precise gel manicure, builder-style enhancement or detailed nail art, the booking menu lets you choose a service and technician before you arrive.</p>
+
+        <div class="features">
+          <div class="feature">Master & Elite nail artists</div>
+          <div class="feature">Huge color selection</div>
+          <div class="feature">OPI professional products</div>
+          <div class="feature">Online booking & confirmation</div>
+          <div class="feature">Walk-in friendly environment</div>
+          <div class="feature">Parking available</div>
+        </div>
+
+        <a class="btn" href="https://www.tampaheavenlynails.com/meetourteam" target="_blank" rel="noopener">Meet the Full Team ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section team" id="artists">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-copy">
+          <span class="eyebrow">Choose your specialist</span>
+          <h2>Artists for every kind of set.</h2>
+          <p class="lead">The current Heavenly team includes Elite, Master, Senior and enhancement-focused technicians. Here are a few of the specialists featured on the live team page.</p>
+        </div>
+        <a class="btn btn-light" href="https://www.tampaheavenlynails.com/meetourteam" target="_blank" rel="noopener">All Technicians ↗</a>
+      </div>
+
+      <div class="team-grid">
+        <article class="team-card">
+          <span class="level">Elite Nail Artist</span>
+          <h3>Vy · 44</h3>
+          <p>Licensed Elite Nail Artist with broad weekly availability.</p>
+        </article>
+        <article class="team-card">
+          <span class="level">Master Nail Artist</span>
+          <h3>Hanna · 37</h3>
+          <p>Master Nail Artist featured on Heavenly’s current technician roster.</p>
+        </article>
+        <article class="team-card">
+          <span class="level">Master Gel + Pedi</span>
+          <h3>Chi · 27</h3>
+          <p>Specializes in gel manicure and pedicure services.</p>
+        </article>
+        <article class="team-card">
+          <span class="level">Elite Gel + Dip</span>
+          <h3>Angela · 35</h3>
+          <p>Elite technician with gel and dip service specialization.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section events">
+    <div class="container events-grid">
+      <div>
+        <span class="eyebrow">More than an appointment</span>
+        <h2>Celebrate at Heavenly.</h2>
+        <p class="lead">The salon also welcomes special occasions. Plan a beauty day around a birthday, bridal gathering or company event and let the team help make it easy.</p>
+        <div class="hero-actions">
+          <a class="btn btn-green" href="tel:+18132862441">Ask About Events</a>
+        </div>
+      </div>
+
+      <div class="event-cards">
+        <div class="event-card"><span>Celebrate</span><h3>Birthday nail days</h3></div>
+        <div class="event-card"><span>Together</span><h3>Bridal parties</h3></div>
+        <div class="event-card"><span>Team time</span><h3>Corporate groups</h3></div>
+        <div class="event-card"><span>Just because</span><h3>Friends’ self-care days</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
+    <div class="container review-grid">
+      <div>
+        <span class="eyebrow">Client love</span>
+        <h2 style="margin-top:14px">A Tampa favorite for years.</h2>
+        <div class="big-rating">
+          <div>
+            <strong>4.9</strong>
+            <div class="stars">★★★★★</div>
+            <small>Fresha · 1155 location</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="quotes">
+        <blockquote class="quote">
+          <q>Annie is the best!</q>
+          <footer>Verified Fresha client</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <q>Amy is amazing!</q>
+          <footer>Verified Fresha client</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <q>Macy is the best. Love Heavenly!</q>
+          <footer>Verified Fresha client</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section locations" id="locations">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-copy">
+          <span class="eyebrow">Two Tampa locations</span>
+          <h2>Find your Heavenly.</h2>
+          <p class="lead">Both salons are located on S. Dale Mabry Highway. Pick the location and appointment time that works best for you.</p>
+        </div>
+      </div>
+
+      <div class="location-grid">
+        <article class="location-card">
+          <div class="location-photo">
+            <img src="https://images.fresha.com/locations/location-profile-images/146621/2150814/50c65d52-43d7-4944-81ec-c1177e82e564-HeavenlyNails-US-Florida-Tampa-UrgentCareBuilding-Fresha.jpg?class=venue-gallery-large&f_quality=85" alt="Heavenly Nails Palm Plaza">
+          </div>
+          <div class="location-content">
+            <span class="eyebrow">Palm Plaza</span>
+            <h3>1155 S Dale Mabry Hwy #18</h3>
+            <p>Tampa, FL 33629 · Call or text 813-286-2441</p>
+
+            <div class="hours">
+              <div class="hour"><span>Monday – Saturday</span><b>8:45 AM – 7:30 PM</b></div>
+              <div class="hour"><span>Sunday</span><b>9:45 AM – 5:00 PM</b></div>
+            </div>
+
+            <div class="location-actions">
+              <a class="btn btn-small" href="https://www.google.com/maps/search/?api=1&query=1155%20S%20Dale%20Mabry%20Hwy%20%2318%20Tampa%20FL%2033629" target="_blank" rel="noopener">Directions ↗</a>
+              <a class="btn btn-small btn-light" href="tel:+18132862441">Call</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="location-card">
+          <div class="location-photo">
+            <img src="https://images.fresha.com/locations/location-profile-images/146648/4212206/1cbc1b3c-41ac-43a2-9a2a-845f21b39595-HeavenlyNailsandSpa-US-Florida-Tampa-PalmaCeiaNeptunePublix-Fresha.jpg?class=venue-gallery-mobile&f_quality=85&f_width=1080" alt="Heavenly Nails Publix Center">
+          </div>
+          <div class="location-content">
+            <span class="eyebrow">Publix Center</span>
+            <h3>1303 S Dale Mabry Hwy</h3>
+            <p>Tampa, FL 33629 · Call or text 813-919-0725</p>
+
+            <div class="hours">
+              <div class="hour"><span>Monday – Saturday</span><b>9:00 AM – 7:30 PM</b></div>
+              <div class="hour"><span>Sunday</span><b>Closed</b></div>
+            </div>
+
+            <div class="location-actions">
+              <a class="btn btn-small" href="https://www.google.com/maps/search/?api=1&query=1303%20S%20Dale%20Mabry%20Hwy%20Tampa%20FL%2033629" target="_blank" rel="noopener">Directions ↗</a>
+              <a class="btn btn-small btn-light" href="tel:+18139190725">Call</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <span class="eyebrow">Ready for fresh nails?</span>
+          <h2>Choose your location, artist and service online.</h2>
+        </div>
+        <a class="btn" href="https://www.fresha.com/providers/heavenly-nails-xjdt0ch7?pId=146648&share=true&allOffer=true&menu=true" target="_blank" rel="noopener">Book on Fresha ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#home">
+          <span class="logo-mark">h</span>
+          <span class="logo-copy">
+            <strong>heavenly</strong>
+            <small>Nails & Spa · Tampa</small>
+          </span>
+        </a>
+        <p class="footer-intro">Manicures, pedicures, gel, dip, enhancements and nail art from a large Tampa team serving clients since 2002.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Explore</div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#artists">Artists</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">Book</div>
+        <div class="footer-links">
+          <a href="https://www.fresha.com/providers/heavenly-nails-xjdt0ch7?pId=146648&share=true&allOffer=true&menu=true" target="_blank" rel="noopener">Online Booking</a>
+          <a href="https://www.fresha.com" target="_blank" rel="noopener">Gift Cards</a>
+          <a href="https://www.tampaheavenlynails.com/meetourteam" target="_blank" rel="noopener">Meet the Team</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">Locations</div>
+        <div class="footer-links">
+          <span>1155 S Dale Mabry Hwy #18</span>
+          <a href="tel:+18132862441">813-286-2441</a>
+          <span style="margin-top:8px">1303 S Dale Mabry Hwy</span>
+          <a href="tel:+18139190725">813-919-0725</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Heavenly Nails & Spa. Website redesign concept.</div>
+      <span>South Tampa · Online booking available 24/7</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn btn-green mobile-book" href="https://www.fresha.com/providers/heavenly-nails-xjdt0ch7?pId=146648&share=true&allOffer=true&menu=true" target="_blank" rel="noopener">Book Appointment ↗</a>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('mainNav');
+
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    document.body.classList.toggle('menu-open', nav.classList.contains('open'));
+    btn.textContent = nav.classList.contains('open') ? '×' : '☰';
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      btn.textContent = '☰';
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#BEA086">
+  <title>House of Beauty | Elegant Beauty Studio</title>
+  <meta name="description" content="House of Beauty website concept with a warm neutral palette, elegant layout, and direct online booking.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --beige:#BEA086;
+      --beige-dark:#a4866d;
+      --beige-soft:#f6f0eb;
+      --beige-pale:#fbf8f5;
+      --text:#1f1a16;
+      --muted:#7d726a;
+      --line:#e8ddd4;
+      --white:#ffffff;
+      --black:#101010;
+      --shadow:0 24px 70px rgba(56,39,26,.10);
+      --container:min(1200px, calc(100% - 40px));
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Manrope",sans-serif;
+      color:var(--text);
+      background:var(--white);
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    body.menu-open{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    .container{width:var(--container);margin-inline:auto}
+    .section{padding:98px 0}
+    .section-sm{padding:70px 0}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{
+      font-family:"Cormorant Garamond",serif;
+      color:var(--text);
+      line-height:.95;
+      letter-spacing:-.03em;
+      font-weight:600;
+    }
+    h2{font-size:clamp(3rem,5vw,5rem);margin-bottom:18px}
+    .lead{color:var(--muted);line-height:1.82;max-width:660px;font-size:1rem}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--beige-dark);
+      font-size:.68rem;
+      font-weight:800;
+      letter-spacing:.17em;
+      text-transform:uppercase;
+    }
+    .eyebrow:before{
+      content:"";
+      width:28px;height:1px;background:currentColor;
+    }
+
+    .btn{
+      min-height:50px;
+      padding:0 22px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      border:1px solid var(--text);
+      background:var(--text);
+      color:#fff;
+      font-size:.8rem;
+      font-weight:800;
+      transition:.22s ease;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(31,26,22,.13)}
+    .btn-beige{background:var(--beige);border-color:var(--beige);color:#fff}
+    .btn-beige:hover{background:var(--beige-dark);border-color:var(--beige-dark)}
+    .btn-light{background:#fff;color:var(--text);border-color:#ded2c9}
+    .btn-light:hover{color:var(--beige-dark);border-color:var(--beige)}
+    .btn-small{min-height:42px;padding:0 17px;font-size:.74rem}
+
+    .topbar{
+      background:var(--beige);
+      color:#fff;
+      font-size:.68rem;
+      font-weight:700;
+    }
+    .topbar .container{
+      min-height:38px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      height:80px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{
+      width:46px;height:46px;border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--beige-soft);
+      color:var(--beige-dark);
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.5rem;
+      font-weight:700;
+    }
+    .brand-copy strong{
+      display:block;
+      font-size:.98rem;
+      font-weight:800;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      line-height:1;
+    }
+    .brand-copy small{
+      display:block;margin-top:5px;
+      color:#988d84;
+      font-size:.54rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    nav{display:flex;align-items:center;gap:26px}
+    nav>a:not(.btn){
+      font-size:.77rem;
+      color:#665d57;
+      font-weight:700;
+    }
+    nav>a:not(.btn):hover{color:var(--beige-dark)}
+    .menu{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff}
+
+    .hero{
+      background:
+        radial-gradient(circle at 7% 12%, rgba(190,160,134,.18), transparent 24rem),
+        linear-gradient(180deg,#fff 0%, #fbf8f5 100%);
+      overflow:hidden;
+    }
+    .hero-grid{
+      min-height:760px;
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:65px;
+      align-items:center;
+    }
+    .hero-copy{padding:30px 0}
+    .hero h1{
+      font-size:clamp(4.8rem,8.4vw,8rem);
+      margin:20px 0 24px;
+      max-width:650px;
+    }
+    .hero h1 em{font-style:italic;color:var(--beige-dark)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+    .hero-meta{
+      display:flex;gap:25px;align-items:center;
+      margin-top:38px;padding-top:24px;
+      border-top:1px solid #e7ddd6;
+      max-width:560px;
+    }
+    .hero-stat b{
+      display:block;
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.55rem;
+      font-weight:700;
+      line-height:.9;
+    }
+    .hero-stat span{display:block;margin-top:4px;color:#8c8179;font-size:.65rem}
+    .hero-stat + .hero-stat{padding-left:24px;border-left:1px solid var(--line)}
+
+    .hero-visual{position:relative;min-height:640px}
+    .hero-main{
+      position:absolute;inset:0 35px 0 55px;
+      border-radius:190px 190px 30px 30px;
+      overflow:hidden;box-shadow:var(--shadow);background:#eadfd7;
+    }
+    .hero-main:after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,transparent 52%, rgba(29,22,18,.24));
+    }
+    .hero-small{
+      position:absolute;left:0;bottom:42px;
+      width:220px;height:270px;
+      border-radius:22px;overflow:hidden;border:8px solid #fff;
+      box-shadow:0 20px 40px rgba(67,47,31,.12);
+    }
+    .hero-badge{
+      position:absolute;right:0;top:60px;z-index:3;
+      width:110px;height:110px;border-radius:50%;
+      background:var(--white);color:var(--beige-dark);
+      display:grid;place-items:center;text-align:center;
+      border:1px solid #eadfd6;
+      font-size:.58rem;font-weight:800;letter-spacing:.12em;
+      text-transform:uppercase;line-height:1.5;
+      box-shadow:var(--shadow);
+    }
+
+    .intro-strip{border-block:1px solid var(--line);background:#fff}
+    .intro-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .intro-card{padding:26px;text-align:center;border-right:1px solid var(--line)}
+    .intro-card:last-child{border-right:0}
+    .intro-card b{
+      display:block;
+      font-family:"Cormorant Garamond",serif;
+      font-size:1.5rem;
+      margin-bottom:4px;
+    }
+    .intro-card span{color:#8b817a;font-size:.7rem}
+
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:35px;
+      margin-bottom:44px;
+    }
+    .section-head-copy{max-width:720px}
+    .section-head h2{margin-top:14px}
+    .section-head .lead{margin-bottom:0}
+
+    .services{background:var(--beige-pale)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service-card{
+      background:#fff;border:1px solid var(--line);border-radius:24px;
+      padding:28px;min-height:295px;position:relative;
+      transition:.22s ease;
+    }
+    .service-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(61,40,24,.08)}
+    .service-no{
+      width:48px;height:48px;border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--beige-soft);color:var(--beige-dark);
+      font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:700;
+    }
+    .service-card h3{font-size:2rem;margin:24px 0 10px}
+    .service-card p{margin:0;color:#7f746d;font-size:.82rem;line-height:1.72}
+    .service-link{
+      position:absolute;left:28px;right:28px;bottom:26px;
+      padding-top:16px;border-top:1px solid #eee5df;
+      font-size:.76rem;font-weight:800;color:var(--beige-dark);
+    }
+
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+    .about-media{position:relative;min-height:620px}
+    .about-main{
+      position:absolute;inset:0 70px 55px 0;
+      border-radius:28px;overflow:hidden;box-shadow:var(--shadow);
+    }
+    .about-mini{
+      position:absolute;right:0;bottom:0;width:250px;height:305px;
+      border-radius:24px;overflow:hidden;border:8px solid #fff;
+      box-shadow:0 18px 38px rgba(61,40,24,.11);
+    }
+    .about-copy h2{margin:14px 0 18px}
+    .points{display:grid;grid-template-columns:1fr 1fr;gap:13px 22px;margin:30px 0 34px}
+    .point{display:flex;align-items:center;gap:10px;color:#625955;font-size:.82rem}
+    .point:before{
+      content:"✓";
+      width:24px;height:24px;display:grid;place-items:center;
+      border-radius:50%;background:var(--beige-soft);color:var(--beige-dark);
+      font-size:.68rem;font-weight:800;
+    }
+
+    .booking-band{background:var(--text);color:#fff}
+    .booking-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:62px;align-items:center}
+    .booking-band .eyebrow{color:#dbc4b1}
+    .booking-band h2{color:#fff}
+    .booking-band .lead{color:#c8beb7}
+    .steps{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .step{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      border-radius:20px;
+      padding:24px;
+      min-height:170px;
+    }
+    .step-no{font-size:.65rem;font-weight:800;letter-spacing:.13em;color:#dbc4b1;text-transform:uppercase}
+    .step h3{font-family:"Manrope",sans-serif;color:#fff;font-size:1.18rem;font-weight:800;margin:14px 0 8px}
+    .step p{margin:0;color:#b7aea8;font-size:.77rem;line-height:1.68}
+
+    .gallery{background:#fff}
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr .9fr;
+      grid-template-rows:290px 290px;
+      gap:13px;
+    }
+    .gallery-item{overflow:hidden;border-radius:24px;position:relative;background:#eadfd6}
+    .gallery-item:first-child{grid-row:1/3}
+    .gallery-item:nth-child(4){grid-column:2/4}
+    .gallery-item img{transition:.5s ease}
+    .gallery-item:hover img{transform:scale(1.04)}
+    .gallery-item:after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,transparent 66%, rgba(20,15,12,.35));
+    }
+    .gallery-item span{
+      position:absolute;left:16px;bottom:15px;z-index:2;
+      padding:8px 11px;border-radius:999px;
+      background:rgba(255,255,255,.9);color:var(--beige-dark);
+      font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+    }
+
+    .testimonials{background:var(--beige-pale)}
+    .review-grid{display:grid;grid-template-columns:.74fr 1.26fr;gap:65px;align-items:start}
+    .score{
+      width:220px;height:220px;border-radius:50%;
+      background:#fff;border:1px solid var(--line);
+      display:grid;place-items:center;text-align:center;
+      margin-top:28px;box-shadow:var(--shadow);
+    }
+    .score strong{
+      display:block;font-family:"Cormorant Garamond",serif;
+      font-size:4rem;line-height:.9;font-weight:700;
+    }
+    .score small{display:block;color:#8b8179;font-size:.68rem;margin-top:7px}
+    .quotes{display:grid;gap:13px}
+    .quote{
+      background:#fff;border:1px solid var(--line);
+      border-radius:22px;padding:25px 26px;
+    }
+    .quote p{font-size:1rem;line-height:1.72;font-weight:600;color:#39312d;margin-bottom:10px}
+    .quote small{color:#978b84;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+
+    .cta-wrap{padding:84px 0}
+    .cta-box{
+      position:relative;overflow:hidden;
+      display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;
+      background:var(--beige);border-radius:32px;padding:42px 46px;
+    }
+    .cta-box:after{
+      content:"";position:absolute;right:-90px;top:-120px;width:250px;height:250px;
+      border-radius:50%;border:1px solid rgba(255,255,255,.22);
+      box-shadow:0 0 0 58px rgba(255,255,255,.05), 0 0 0 116px rgba(255,255,255,.03);
+    }
+    .cta-box h2{margin:0;color:#fff;position:relative;z-index:2;max-width:760px}
+    .cta-box .btn{position:relative;z-index:2;background:#fff;border-color:#fff;color:var(--text)}
+
+    footer{background:var(--text);color:#fff;padding:56px 0 26px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr 1fr;gap:38px}
+    footer .brand-copy strong{color:#fff}
+    footer .brand-copy small{color:#b3aaa4}
+    footer p,footer a,footer span{color:#bfb6b0;font-size:.74rem}
+    .footer-intro{max-width:340px;line-height:1.72;margin-top:15px}
+    .footer-title{color:#fff;font-size:.63rem;font-weight:800;text-transform:uppercase;letter-spacing:.15em;margin-bottom:13px}
+    .footer-links{display:grid;gap:9px}
+    .footer-links a:hover{color:#fff}
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.08);
+      margin-top:42px;padding-top:20px;
+      display:flex;justify-content:space-between;gap:18px;
+      color:#978f89;font-size:.65rem;
+    }
+
+    .mobile-book{display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:45;box-shadow:0 16px 40px rgba(37,25,16,.22)}
+
+    @media(max-width:1020px){
+      nav{display:none}
+      nav.open{
+        display:flex;position:fixed;top:117px;left:20px;right:20px;
+        flex-direction:column;align-items:stretch;
+        background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;
+        box-shadow:var(--shadow);
+      }
+      nav.open .btn{width:100%}
+      .menu{display:grid;place-items:center}
+      .hero-grid,.about-grid,.booking-grid,.review-grid{grid-template-columns:1fr}
+      .hero-visual{min-height:560px}
+      .service-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1.2fr 1fr 1fr}
+      .footer-grid>div:last-child{grid-column:1/-1}
+    }
+
+    @media(max-width:700px){
+      :root{--container:calc(100% - 28px)}
+      .section{padding:74px 0}
+      .topbar .container{justify-content:center}
+      .topbar span:first-child{display:none}
+      .nav{height:70px}
+      nav.open{top:106px}
+      .hero-grid{min-height:auto}
+      .hero h1{font-size:clamp(4rem,18vw,5.9rem)}
+      .hero-actions{display:grid;grid-template-columns:1fr}
+      .hero-actions .btn{width:100%}
+      .hero-meta{gap:14px}
+      .hero-stat + .hero-stat{padding-left:14px}
+      .hero-visual{min-height:470px}
+      .hero-main{left:28px;right:0;border-radius:120px 120px 24px 24px}
+      .hero-small{width:180px;height:220px;bottom:18px;border-width:6px}
+      .hero-badge{width:84px;height:84px;top:24px;font-size:.5rem}
+      .intro-grid{grid-template-columns:1fr 1fr}
+      .intro-card:nth-child(2){border-right:0}
+      .intro-card:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .section-head{display:block}
+      .section-head .btn{margin-top:18px}
+      .service-grid{grid-template-columns:1fr}
+      .about-media{min-height:500px}
+      .about-main{right:46px;bottom:46px}
+      .about-mini{width:185px;height:225px}
+      .points{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:1fr;grid-template-rows:360px 235px 235px 270px}
+      .gallery-item:first-child,.gallery-item:nth-child(4){grid-row:auto;grid-column:auto}
+      .score{width:180px;height:180px}
+      .score strong{font-size:3.3rem}
+      .cta-box{grid-template-columns:1fr;padding:30px 24px}
+      .cta-box .btn{width:100%}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:1/-1}
+      .footer-bottom{display:block}
+      .footer-bottom span{display:block;margin-top:7px}
+      .mobile-book{display:flex}
+      body{padding-bottom:70px}
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>House of Beauty · Elegant beauty experience · Book online anytime</span>
+    <a href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">Schedule Appointment ↗</a>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand">
+      <span class="brand-mark">H</span>
+      <span class="brand-copy">
+        <strong>House of Beauty</strong>
+        <small>Beauty Studio</small>
+      </span>
+    </a>
+
+    <nav id="mainNav">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a class="btn btn-small btn-beige" href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">Book Now ↗</a>
+    </nav>
+
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Beauty, elevated</span>
+        <h1>A softer kind of <em>luxury.</em></h1>
+        <p class="lead">
+          A refined beauty studio concept designed around warm neutrals, calm energy, and a polished client experience — with seamless online booking at the center.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-beige" href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">Book Appointment ↗</a>
+          <a class="btn btn-light" href="#services">Explore Services</a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-stat"><b>Beauty</b><span>Personalized services</span></div>
+          <div class="hero-stat"><b>Luxury</b><span>Warm, polished experience</span></div>
+          <div class="hero-stat"><b>Online</b><span>Direct booking available</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-main">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=85" alt="Beauty studio service">
+        </div>
+        <div class="hero-small">
+          <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=700&q=85" alt="Beauty treatment detail">
+        </div>
+        <div class="hero-badge">Book<br>Online</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-strip">
+    <div class="container intro-grid">
+      <div class="intro-card"><b>Elegant</b><span>Warm modern design</span></div>
+      <div class="intro-card"><b>Calm</b><span>Relaxed beauty atmosphere</span></div>
+      <div class="intro-card"><b>Polished</b><span>Luxury client experience</span></div>
+      <div class="intro-card"><b>Simple</b><span>Easy scheduling flow</span></div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-copy">
+          <span class="eyebrow">Services</span>
+          <h2>What clients come in for.</h2>
+          <p class="lead">This concept is built for a modern beauty business, with flexible service categories that can be adapted directly to the real booking menu.</p>
+        </div>
+        <a class="btn btn-light" href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">View Schedule ↗</a>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-no">01</div>
+          <h3>Lashes</h3>
+          <p>Enhancement services designed to create soft definition, fullness, and polished eye-focused results.</p>
+          <div class="service-link">Natural to dramatic looks</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">02</div>
+          <h3>Brows</h3>
+          <p>Shape, tint, and refinement services that frame the face and create a more balanced finish.</p>
+          <div class="service-link">Shaping, tinting, and styling</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">03</div>
+          <h3>Skin</h3>
+          <p>Treatment-based services focused on glow, texture, and a fresher, more radiant appearance.</p>
+          <div class="service-link">Glow-focused care</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">04</div>
+          <h3>Waxing</h3>
+          <p>Clean, efficient beauty maintenance designed to feel professional, streamlined, and comfortable.</p>
+          <div class="service-link">Face and body options</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">05</div>
+          <h3>Makeup</h3>
+          <p>Beauty applications for everyday confidence, events, and a camera-ready polished finish.</p>
+          <div class="service-link">Soft glam to event-ready</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">06</div>
+          <h3>Consultations</h3>
+          <p>Client-first appointment planning so every service starts with the right treatment and expectation.</p>
+          <div class="service-link">Personalized recommendations</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-media">
+        <div class="about-main">
+          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=85" alt="Beauty studio portrait">
+        </div>
+        <div class="about-mini">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85" alt="Client beauty detail">
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <span class="eyebrow">About the studio</span>
+        <h2>Designed to feel calm, feminine, and premium.</h2>
+        <p class="lead">House of Beauty is presented here as a polished studio brand — warm, welcoming, and clearly built around the booking experience.</p>
+        <p class="lead">The visual direction focuses on soft luxury instead of something loud: creamy whites, muted beige, elegant typography, spacious layouts, and a feeling of ease throughout.</p>
+
+        <div class="points">
+          <div class="point">Warm neutral palette</div>
+          <div class="point">Soft luxury atmosphere</div>
+          <div class="point">Flexible beauty services</div>
+          <div class="point">Strong booking focus</div>
+          <div class="point">Editorial gallery feel</div>
+          <div class="point">Responsive mobile layout</div>
+        </div>
+
+        <a class="btn btn-beige" href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">Book Your Visit ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section booking-band">
+    <div class="container booking-grid">
+      <div>
+        <span class="eyebrow">Online scheduling</span>
+        <h2>Booking should feel effortless.</h2>
+        <p class="lead">This concept keeps your scheduling link front and center, so the site supports the real conversion goal: getting clients from browsing to booking with minimal friction.</p>
+        <a class="btn btn-beige" href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">Open Booking Page ↗</a>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-no">Step 01</div>
+          <h3>Choose service</h3>
+          <p>Clients begin by selecting the treatment category that fits what they need most.</p>
+        </div>
+        <div class="step">
+          <div class="step-no">Step 02</div>
+          <h3>Pick a time</h3>
+          <p>Scheduling stays simple with a clear appointment flow and direct availability access.</p>
+        </div>
+        <div class="step">
+          <div class="step-no">Step 03</div>
+          <h3>Confirm details</h3>
+          <p>The booking experience feels organized, professional, and easy to follow.</p>
+        </div>
+        <div class="step">
+          <div class="step-no">Step 04</div>
+          <h3>Arrive relaxed</h3>
+          <p>Clients come in already prepared, making the studio experience feel smoother from the start.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-copy">
+          <span class="eyebrow">Visual story</span>
+          <h2>A clean and feminine beauty gallery.</h2>
+          <p class="lead">This section gives the brand a more editorial look and can later be swapped with real portfolio photos from the business.</p>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=85" alt="Beauty treatment image">
+          <span>Studio</span>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="Beauty portrait">
+          <span>Client</span>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85" alt="Beauty close up">
+          <span>Glow</span>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=85" alt="Beauty experience">
+          <span>Beauty</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials" id="reviews">
+    <div class="container review-grid">
+      <div>
+        <span class="eyebrow">Client experience</span>
+        <h2 style="margin-top:14px">Built to feel memorable.</h2>
+        <div class="score">
+          <div>
+            <strong>Luxury</strong>
+            <small>Warm, soft, elevated feel</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="quotes">
+        <article class="quote">
+          <p>“The whole brand direction feels soft, polished, and high-end without being overdone.”</p>
+          <small>Design direction note</small>
+        </article>
+        <article class="quote">
+          <p>“The booking flow is clear, and the beige-and-white palette gives the studio a calm premium feel.”</p>
+          <small>Concept feedback</small>
+        </article>
+        <article class="quote">
+          <p>“It feels feminine and beautiful, but still clean and professional — perfect for a modern beauty studio.”</p>
+          <small>Concept feedback</small>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-wrap">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to turn this into a live beauty website?</h2>
+        <a class="btn" href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">Book Appointment ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="brand">
+          <span class="brand-mark">H</span>
+          <span class="brand-copy">
+            <strong>House of Beauty</strong>
+            <small>Beauty Studio</small>
+          </span>
+        </a>
+        <p class="footer-intro">A warm, feminine website concept built around a simple goal: help clients understand the brand quickly and book with confidence.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Explore</div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">Booking</div>
+        <div class="footer-links">
+          <a href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">Schedule Online</a>
+          <a href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">Appointment Link</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">Theme</div>
+        <div class="footer-links">
+          <span>#BEA086</span>
+          <span>White</span>
+          <span>Soft luxury styling</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 House of Beauty. Website concept.</div>
+      <span>Color palette: #BEA086 & white</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn btn-beige mobile-book" href="https://houseofbeauty.as.me/schedule/23c501c1" target="_blank" rel="noopener">Book Appointment ↗</a>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mainNav = document.getElementById('mainNav');
+
+  menuBtn.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+    document.body.classList.toggle('menu-open', mainNav.classList.contains('open'));
+    menuBtn.textContent = mainNav.classList.contains('open') ? '×' : '☰';
+  });
+
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      menuBtn.textContent = '☰';
+    });
+  });
+</script>
+
+</body>
+</html>
